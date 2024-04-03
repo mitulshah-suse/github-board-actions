@@ -14,10 +14,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Get project data
+      - name: Run script to add issues to project board
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
         run: ./addIssues2InfracloudProject.sh
