@@ -57,7 +57,7 @@ done
 #Fetch rancherlabs/image-scanning repo issues with team/infracloud label
 issues=`gh api graphql -f query="
 query{
-    repository(owner: "rancherlabs", name: "image-scanning"){
+    repository(owner: \"rancherlabs\", name: \"image-scanning\"){
         issues(first: 100, states: OPEN, labels: \"${label_name}\") {
             nodes{
                 number
