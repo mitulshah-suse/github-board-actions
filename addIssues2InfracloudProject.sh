@@ -7,7 +7,7 @@ project_number=67
 
 project_id=`gh api graphql -f query="
 query{
-    repository(owner: \"${owner_name}\", name: "rancher") {
+    repository(owner: \"${owner_name}\", name: \"rancher\") {
         projectV2(number: ${project_number}) {
             id
         }
