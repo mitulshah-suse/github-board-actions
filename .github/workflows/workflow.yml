@@ -17,4 +17,6 @@ jobs:
       - name: Run script to add issues to project board
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: ./addIssues2InfracloudProject.sh
+        run: |
+          chmod 755 addIssues2InfracloudProject.sh
+          ./addIssues2InfracloudProject.sh
